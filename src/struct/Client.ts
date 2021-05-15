@@ -19,7 +19,7 @@ export default class extends Client {
       prefix: process.env.PREFIX || '',
       invite: process.env.INTVITE || ''
     }
-    const files = readRecursively(PATH + '\\lib\\commands')
+    const files = readRecursively(PATH + '/lib/commands')
     for (const file of files) {
       this.commands.push(require(file) as Command)
     }

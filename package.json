@@ -9,7 +9,6 @@
     "build": "babel src --out-dir lib --extensions .ts,.tsx",
     "tsc": "tsc"
   },
-  "license": "MIT",
   "dependencies": {
     "ascii-table": "^0.0.9",
     "discord.js": "^12.5.3",
@@ -17,8 +16,11 @@
     "fs": "^0.0.1-security"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.2",
+    "@babel/plugin-transform-runtime": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-typescript": "^7.13.0",
+    "@babel/register": "^7.13.16",
     "@types/node": "^15.3.0",
     "prettier": "2.3.0"
   }
