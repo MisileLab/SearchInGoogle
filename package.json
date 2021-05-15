@@ -1,0 +1,25 @@
+{
+  "name": "searchingoogle",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nodemon ./lib/index.js",
+    "start": "yarn build && nodemon ./lib/struct/Shard.js",
+    "style": "yarn run prettier . --write",
+    "watch": "babel --watch src --out-dir lib --extensions .ts,.tsx",
+    "build": "babel src --out-dir lib --extensions .ts,.tsx",
+    "tsc": "tsc"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "discord.js": "^12.5.3",
+    "dotenv": "^9.0.2",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/node": "^15.3.0",
+    "prettier": "2.3.0"
+  }
+}
