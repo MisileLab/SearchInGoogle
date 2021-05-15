@@ -9,7 +9,7 @@ const onReady = (client: Client) => {
     for (let file of list) {
       try {
         let pull = require(`../commands/${file}`)
-        if (pull.name && pull.aliases && pull.run) {
+        if (pull) {
           table.addRow(file, '✅')
         } else {
           table.addRow(file, '❌ -> Error')
@@ -27,7 +27,7 @@ const onReady = (client: Client) => {
     client.user.setPresence({
       status: 'online',
       activity: {
-        name: `음악`,
+        name: `개발자들의 울부짖음`,
         type: 'LISTENING'
       }
     })

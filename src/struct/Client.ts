@@ -16,7 +16,7 @@ export default class extends Client {
 
     this.config = {
       token: process.env.TOKEN || '',
-      prefix: process.env.PREFIX || '',
+      prefix: process.env.PREFIX || ';',
       invite: process.env.INTVITE || ''
     }
     const files = readRecursively(PATH + '/lib/commands')
