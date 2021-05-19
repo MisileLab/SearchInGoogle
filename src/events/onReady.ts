@@ -27,7 +27,7 @@ const onReady = (client: Client) => {
     client.user.setPresence({
       status: 'online',
       activity: {
-        name: `개발자들의 울부짖음`,
+        name: `${client.guilds.cache.size}곳에서 ${client.users.cache.size}명의 개발자들의 마음의 소리`,
         type: 'LISTENING'
       }
     })

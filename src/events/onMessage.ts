@@ -8,6 +8,17 @@ const onMessage = (client: Client, message: Discord.Message) => {
   
   if (!message.guild) return
   if (author.bot) return
+
+  if(client.user){
+    if (message.mentions.has(client.user.id)) {
+      if (message.content.includes('@here') || message.content.includes('@everyone')) return
+      return message.channel.send(';')
+    }
+    if (message.content == ';') {
+      return message.channel.send(';도움')
+    }
+  }
+
   if (!content.startsWith(prefix)) return
 
   const query = new Query(prefix, content)
